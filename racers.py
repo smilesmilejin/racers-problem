@@ -1,6 +1,31 @@
 def non_winners(races):
     # Write your solution here!
-    pass
+    # pass
+
+    # create a winners_set include
+        # loop thorugh the values in the races, add tutple[0] to the set
+
+    # output = set()
+    # loop through person 
+        # start second element of tuple 
+        # if it it not in the winners_set, add output
+    
+    # return output
+
+    winners_set = set()
+
+    for winners in races.values():
+        winners_set.add(winners[0])
+    
+    output = set()
+
+    for winners in races.values():
+        for i in range(1, len(winners)):
+            if winners[i] not in winners_set:
+                output.add(winners[i])
+
+    print(output)
+    return output
 
 
 races_1 = {
